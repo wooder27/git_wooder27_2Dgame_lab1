@@ -1,16 +1,30 @@
-using UnityEditor.SearchService;
+﻿using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneControl : MonoBehaviour
+namespace wooder.Tools
 {
-    public void LoadScene(string sceneName)
+    /// <summary>
+    /// 場景控制器 載入場景與退出場景
+    /// </summary>
+    public class SceneControl : MonoBehaviour
     {
-        SceneManager.LoadScene(sceneName);
+        /// <summary>
+        /// 載入場景
+        /// </summary>
+        /// <param name="sceneName">載入場景</param>
+        public void LoadScene(string sceneName)
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+
+        /// <summary>
+        /// 退出場景
+        /// </summary>
+        public void QuitGame() //測試
+        {
+            Application.Quit();
+        }
     }
 
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
 }
